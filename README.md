@@ -22,7 +22,8 @@
 <h3>Excluding people in the chat:</h3>
   <p>io.on('connection', function(socket){<br>
   socket.broadcast.emit('hi');<br>
-  });</p>
+  });
+  </p>
 ------------------------------------------------
 <h3>To send to everyone:</h3>
   <p>io.on('connection', function(socket){<br>
