@@ -17,7 +17,7 @@ May 16, 2015
 <p>•	A server that integrates with the Node.JS HTTP Server: socket.io</p>
 <p>•	A client library that loads on the browser side: Socket.io-client</p>
 
-<p>The main idea behind Socket.IO is that you can send and receive any events you want, with any data you want. Any objects that can be encoded as JSON will do, and binary data is supported too.</p><br>
+<p>The main idea behind Socket.IO is that you can send and receive any events you want, with any data you want. Any objects that can be encoded as JSON will do, and binary data is supported too.</p>
 
 <h3>Excluding people in the chat:</h3>
   <p>io.on('connection', function(socket){<br>
@@ -25,7 +25,7 @@ May 16, 2015
 });</p>
 ------------------------------------------------
 <h3>To send to everyone:</h3>
-	<p>io.on('connection', function(socket){<br>
+  <p>io.on('connection', function(socket){<br>
   socket.on('chat message', function(msg){<br>
     io.emit('chat message', msg);<br>
   });<br>
