@@ -7,26 +7,26 @@ This is the topic that I have been trying to get a basic understanding of for no
 
 May 16, 2015
 <h1>SOCKET.IO</h1>
-<p>Writing a chat application with popular web applications stacks like LAMP (PHP) has traditionally been very hard. It involves polling the server for changes, keeping track of timestamps, and it’s a lot slower than it should be.
+<p>Writing a chat application with popular web applications stacks like LAMP (PHP) has traditionally been very hard. It involves polling the server for changes, keeping track of timestamps, and it’s a lot slower than it should be.</p>
+<br><br>
+<p>Sockets have traditionally been the solution around which most real time chat systems are architected, providing a bi-directional (two way) communication channel between a client and a server.</p>
+<br><br>
+<p>This means that the server can push messages to clients. Whenever you write a chat message, the idea is that the server will get it and push it to all other connected clients. So in other wards the server can recieve the message being sent and then relay that message to all of the clients that are connected to the chat session.</p>
+<br><br>
+<h3>Socket.IO is composed of two parts:</h3>
+<p>•	A server that integrates with the Node.JS HTTP Server: socket.io</p><br>
+<p>•	A client library that loads on the browser side: Socket.io-client</p><br><br>
 
-Sockets have traditionally been the solution around which most real time chat systems are architected, providing a bi-directional (two way) communication channel between a client and a server.
+<p>The main idea behind Socket.IO is that you can send and receive any events you want, with any data you want. Any objects that can be encoded as JSON will do, and binary data is supported too.</p><br><br>
 
-This means that the server can push messages to clients. Whenever you write a chat message, the idea is that the server will get it and push it to all other connected clients. So in other wards the server can recieve the message being sent and then relay that message to all of the clients that are connected to the chat session.</p>
-
-Socket.IO is composed of two parts:
-•	A server that integrates with the Node.JS HTTP Server: socket.io
-•	A client library that loads on the browser side: Socket.io-client
-
-The main idea behind Socket.IO is that you can send and receive any events you want, with any data you want. Any objects that can be encoded as JSON will do, and binary data is supported too.
-
-Excluding people in the chat:
-	io.on('connection', function(socket){
-  socket.broadcast.emit('hi');
-});
+<h3>Excluding people in the chat:</h3>
+  <p>io.on('connection', function(socket){<br>
+  socket.broadcast.emit('hi');<br>
+});</p><br>
 ------------------------------------------------
-To send to everyone:
-	io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
-  });
-});
+<h3>To send to everyone:</h3>
+	<p>io.on('connection', function(socket){<br>
+  socket.on('chat message', function(msg){<br>
+    io.emit('chat message', msg);<br>
+  });<br>
+});</p>
