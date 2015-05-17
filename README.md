@@ -8,11 +8,11 @@ This is the topic that I have been trying to get a basic understanding of for no
 May 16, 2015
 <h1>SOCKET.IO</h1>
 <p>Writing a chat application with popular web applications stacks like LAMP (PHP) has traditionally been very hard. It involves polling the server for changes, keeping track of timestamps, and it’s a lot slower than it should be.</p>
-<br>
+
 <p>Sockets have traditionally been the solution around which most real time chat systems are architected, providing a bi-directional (two way) communication channel between a client and a server.</p>
-<br>
+
 <p>This means that the server can push messages to clients. Whenever you write a chat message, the idea is that the server will get it and push it to all other connected clients. So in other wards the server can recieve the message being sent and then relay that message to all of the clients that are connected to the chat session.</p>
-<br>
+
 <h3>Socket.IO is composed of two parts:</h3>
 <p>•	A server that integrates with the Node.JS HTTP Server: socket.io</p>
 <p>•	A client library that loads on the browser side: Socket.io-client</p>
@@ -22,7 +22,7 @@ May 16, 2015
 <h3>Excluding people in the chat:</h3>
   <p>io.on('connection', function(socket){<br>
   socket.broadcast.emit('hi');<br>
-});</p><br>
+});</p>
 ------------------------------------------------
 <h3>To send to everyone:</h3>
 	<p>io.on('connection', function(socket){<br>
