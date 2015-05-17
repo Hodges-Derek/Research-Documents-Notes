@@ -19,6 +19,8 @@
 
 <p>The main idea behind Socket.IO is that you can send and receive any events you want, with any data you want. Any objects that can be encoded as JSON will do, and binary data is supported too.</p>
 
+<p>The following examples of code are examples that can be used to include or exclude certain people from a chat room.</p>
+
 <h3>Excluding people in the chat:</h3>
   <p>io.on('connection', function(socket){<br>
   socket.broadcast.emit('hi');<br>
