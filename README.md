@@ -33,3 +33,15 @@
     io.emit('chat message', msg);<br>
   });<br>
 });</p>
+
+------------------------------------------------------------------------------------------------------------------------
+
+<p>June 4, 2015</p>
+<h2>Model View Controller Pattern</h2><br>
+
+<p> I have started studying model view controller pattern and this is what I have learned:</p>
+<p> ---Completely separates the calculations and interface from each other</p>
+<p>Model = Data and Methods used to work with it<br>
+View = Interface<br>
+Controller = Coordinates interactions between the View and Model</p><br><br>
+
